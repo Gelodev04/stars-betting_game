@@ -1,139 +1,91 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Stars | Charge</title>
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <link rel="stylesheet" href="/style/globals.css" />
-    <style type="text/tailwindcss">
-      @theme {
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Stars | Charge</title>
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="/style/globals.css" />
+  <style type="text/tailwindcss">
+    @theme {
         --color-maintheme: #e2be81;
         --color-textwhite: #aeafaf;
         --color-textdarker: #7d7d7d;
       }
     </style>
-  </head>
+</head>
 
-  <body class="!bg-[#181919]">
-    <!-- header -->
-    <header class="px-2 py-2 border-b border-[#1f1f20] bg-[#0f0f0e]">
-      <nav class="flex items-center justify-between">
-        <!-- logo -->
-        <div class="flex items-center flex-row-reverse gap-">
-          <a href="/"
-            ><img src="/images/logo-big.png" alt="logo" class="w-[90px]"
-          /></a>
-          <button class="cursor-pointer" id="toggleSidebar">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              class="size-6 fill-[#787878]"
-            >
-              <path
-                fill-rule="evenodd"
-                d="M3 9a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9Zm0 6.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
-                clip-rule="evenodd"
-              />
+<body class="!bg-[#181919]">
+  <!-- header -->
+  <header class="px-2 py-2 border-b border-[#1f1f20] bg-[#0f0f0e]">
+    <nav class="flex items-center justify-between">
+      <!-- logo -->
+      <div class="flex items-center flex-row-reverse gap-">
+        <a href="/"><img src="/images/logo-big.png" alt="logo" class="w-[90px]" /></a>
+        <button class="cursor-pointer" id="toggleSidebar">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" class="size-6 fill-[#787878]">
+            <path fill-rule="evenodd"
+              d="M3 9a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75A.75.75 0 0 1 3 9Zm0 6.75a.75.75 0 0 1 .75-.75h16.5a.75.75 0 0 1 0 1.5H3.75a.75.75 0 0 1-.75-.75Z"
+              clip-rule="evenodd" />
+          </svg>
+        </button>
+      </div>
+      <!-- profile -->
+      <div class="space-x-[3px] flex items-center">
+        <!-- balance -->
+        <div class="flex  gap-1">
+          <div
+            class=" flex items-center text-[8px] text-textwhite bg-[#272727] rounded-[2px] px-[5px] py-[3px] gap-[1px]">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="size-3" preserveAspectRatio="xMidYMid meet" fill="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
+                <path
+                  d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2m-4.592 37.521c1.316 1.621 2.988 2.431 5.018 2.431c2.078 0 3.664-.695 4.756-2.086c.604-.748 1.104-1.87 1.502-3.366h6.023c-.52 3.163-1.848 5.735-3.982 7.717c-2.137 1.981-4.871 2.972-8.209 2.972c-4.129 0-7.375-1.338-9.736-4.016c-2.363-2.689-3.545-6.378-3.545-11.063c0-5.066 1.344-8.971 4.031-11.713c2.338-2.389 5.311-3.583 8.92-3.583c4.83 0 8.361 1.601 10.594 4.804c1.234 1.798 1.896 3.602 1.986 5.413h-6.063c-.387-1.392-.881-2.44-1.484-3.149c-1.08-1.26-2.682-1.891-4.803-1.891c-2.16 0-3.863.89-5.111 2.668c-1.246 1.778-1.869 4.295-1.869 7.549c0 3.254.658 5.691 1.972 7.313"
+                  fill=" #e2be81"></path>
+              </g>
             </svg>
-          </button>
-        </div>
-        <!-- profile -->
-        <div class="space-x-[3px] flex items-center">
-          <!-- balance -->
-          <div class="flex  gap-1">
-            <div
-              class=" flex items-center text-[8px] text-textwhite bg-[#272727] rounded-[2px] px-[5px] py-[3px] gap-[1px]"
-            >
-              <svg
-                viewBox="0 0 64 64"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                class="size-3"
-                preserveAspectRatio="xMidYMid meet"
-                fill="#000000"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2m-4.592 37.521c1.316 1.621 2.988 2.431 5.018 2.431c2.078 0 3.664-.695 4.756-2.086c.604-.748 1.104-1.87 1.502-3.366h6.023c-.52 3.163-1.848 5.735-3.982 7.717c-2.137 1.981-4.871 2.972-8.209 2.972c-4.129 0-7.375-1.338-9.736-4.016c-2.363-2.689-3.545-6.378-3.545-11.063c0-5.066 1.344-8.971 4.031-11.713c2.338-2.389 5.311-3.583 8.92-3.583c4.83 0 8.361 1.601 10.594 4.804c1.234 1.798 1.896 3.602 1.986 5.413h-6.063c-.387-1.392-.881-2.44-1.484-3.149c-1.08-1.26-2.682-1.891-4.803-1.891c-2.16 0-3.863.89-5.111 2.668c-1.246 1.778-1.869 4.295-1.869 7.549c0 3.254.658 5.691 1.972 7.313"
-                    fill=" #e2be81"
-                  ></path>
-                </g>
-              </svg>
-              <div class="flex gap-[1px]">
-                <span>12,310</span>
-                <span class="text-textdarker whitespace-nowrap">개시</span>
-              </div>
-            </div>
-            <div
-              class="  flex items-center text-[8px] text-textwhite bg-[#272727] rounded-[2px] px-[5px] py-[3px] gap-[1px]"
-            >
-              <svg
-                viewBox="0 0 64 64"
-                xmlns="http://www.w3.org/2000/svg"
-                xmlns:xlink="http://www.w3.org/1999/xlink"
-                aria-hidden="true"
-                role="img"
-                class="size-3"
-                preserveAspectRatio="xMidYMid meet"
-                fill="#000000"
-              >
-                <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                <g
-                  id="SVGRepo_tracerCarrier"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                ></g>
-                <g id="SVGRepo_iconCarrier">
-                  <path
-                    d="M33.543 22.531h-5.464v8.543h5.464c1.384 0 2.46-.348 3.228-1.043s1.151-1.797 1.151-3.307s-.384-2.586-1.151-3.229s-1.844-.964-3.228-.964"
-                    fill="#e2be81"
-                  ></path>
-                  <path
-                    d="M31.999 2c-16.568 0-30 13.432-30 30s13.432 30 30 30C48.568 62 62 48.568 62 32S48.568 2 31.999 2m9.398 31.949c-1.699 1.418-4.125 2.125-7.277 2.125h-6.041v10.434h-6.023V17.492h12.458c2.872 0 5.162.748 6.87 2.244c1.707 1.496 2.562 3.813 2.562 6.949c-.001 3.424-.85 5.846-2.549 7.264"
-                    fill="#e2be81"
-                  ></path>
-                </g>
-              </svg>
-              <div class="flex gap-[1px]">
-                <span>1,523</span>
-                <span class="text-textdarker whitespace-nowrap">개시</span>
-              </div>
+            <div class="flex gap-[1px]">
+              <span>12,310</span>
+              <span class="text-textdarker whitespace-nowrap">개시</span>
             </div>
           </div>
-
-
-          <!-- profile pic -->
           <div
-            class="relative flex items-center gap-[3px] flex-row-reverse"
-            id="profile-container"
-          >
-            <div
-              id="profile-toggle"
-              class="relative size-[23px] flex items-center justify-center overflow-hidden rounded-full bg-[#525352] cursor-pointer"
-            >
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                viewBox="0 0 24 24"
-                fill="#e2be81"
-                class="size-[24px] mt-3"
-              >
+            class="  flex items-center text-[8px] text-textwhite bg-[#272727] rounded-[2px] px-[5px] py-[3px] gap-[1px]">
+            <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+              aria-hidden="true" role="img" class="size-3" preserveAspectRatio="xMidYMid meet" fill="#000000">
+              <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+              <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+              <g id="SVGRepo_iconCarrier">
                 <path
-                  fill-rule="evenodd"
-                  d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
-                  clip-rule="evenodd"
-                />
-              </svg>
+                  d="M33.543 22.531h-5.464v8.543h5.464c1.384 0 2.46-.348 3.228-1.043s1.151-1.797 1.151-3.307s-.384-2.586-1.151-3.229s-1.844-.964-3.228-.964"
+                  fill="#e2be81"></path>
+                <path
+                  d="M31.999 2c-16.568 0-30 13.432-30 30s13.432 30 30 30C48.568 62 62 48.568 62 32S48.568 2 31.999 2m9.398 31.949c-1.699 1.418-4.125 2.125-7.277 2.125h-6.041v10.434h-6.023V17.492h12.458c2.872 0 5.162.748 6.87 2.244c1.707 1.496 2.562 3.813 2.562 6.949c-.001 3.424-.85 5.846-2.549 7.264"
+                  fill="#e2be81"></path>
+              </g>
+            </svg>
+            <div class="flex gap-[1px]">
+              <span>1,523</span>
+              <span class="text-textdarker whitespace-nowrap">개시</span>
             </div>
-            <!-- <div class="absolute bottom-[-3px] right-[-0.5px] z-[20]">
+          </div>
+        </div>
+
+
+        <!-- profile pic -->
+        <div class="relative flex items-center gap-[3px] flex-row-reverse" id="profile-container">
+          <div id="profile-toggle"
+            class="relative size-[23px] flex items-center justify-center overflow-hidden rounded-full bg-[#525352] cursor-pointer">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#e2be81" class="size-[24px] mt-3">
+              <path fill-rule="evenodd"
+                d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                clip-rule="evenodd" />
+            </svg>
+          </div>
+          <!-- <div class="absolute bottom-[-3px] right-[-0.5px] z-[20]">
               <svg
                 class="size-[13px] bg-[#333232] rounded-full border border-[#0f0f0e]"
                 fill="white"
@@ -161,511 +113,326 @@
               </svg>
             </div> -->
 
-            <div
-              id="dropdown"
-              class="hidden absolute top-full -right-8 mt-2 w-[120px] bg-[#2d2d2d] text-white rounded shadow-lg z-50"
-            >
-              <ul class="p-1 divide-y divide-textdarker">
-                <li
-                  class="px-2 py-[6px] cursor-pointer flex items-center text-[11px] gap-2"
-                >
-                  <svg
-                    viewBox="0 0 64 64"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    aria-hidden="true"
-                    role="img"
-                    class="size-4"
-                    preserveAspectRatio="xMidYMid meet"
-                    fill="#000000"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2m-4.592 37.521c1.316 1.621 2.988 2.431 5.018 2.431c2.078 0 3.664-.695 4.756-2.086c.604-.748 1.104-1.87 1.502-3.366h6.023c-.52 3.163-1.848 5.735-3.982 7.717c-2.137 1.981-4.871 2.972-8.209 2.972c-4.129 0-7.375-1.338-9.736-4.016c-2.363-2.689-3.545-6.378-3.545-11.063c0-5.066 1.344-8.971 4.031-11.713c2.338-2.389 5.311-3.583 8.92-3.583c4.83 0 8.361 1.601 10.594 4.804c1.234 1.798 1.896 3.602 1.986 5.413h-6.063c-.387-1.392-.881-2.44-1.484-3.149c-1.08-1.26-2.682-1.891-4.803-1.891c-2.16 0-3.863.89-5.111 2.668c-1.246 1.778-1.869 4.295-1.869 7.549c0 3.254.658 5.691 1.972 7.313"
-                        fill=" #e2be81"
-                      ></path>
-                    </g>
-                  </svg>
-                  <div>
-                    <span>12,310</span>
-                    <span class="text-textdarker">개시</span>
-                  </div>
-                </li>
-                <li
-                  class="px-2 py-[6px] cursor-pointer flex items-center  gap-2"
-                >
-                  <svg
-                    viewBox="0 0 64 64"
-                    xmlns="http://www.w3.org/2000/svg"
-                    xmlns:xlink="http://www.w3.org/1999/xlink"
-                    aria-hidden="true"
-                    role="img"
-                    class="size-4"
-                    preserveAspectRatio="xMidYMid meet"
-                    fill="#000000"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        d="M33.543 22.531h-5.464v8.543h5.464c1.384 0 2.46-.348 3.228-1.043s1.151-1.797 1.151-3.307s-.384-2.586-1.151-3.229s-1.844-.964-3.228-.964"
-                        fill="#e2be81"
-                      ></path>
-                      <path
-                        d="M31.999 2c-16.568 0-30 13.432-30 30s13.432 30 30 30C48.568 62 62 48.568 62 32S48.568 2 31.999 2m9.398 31.949c-1.699 1.418-4.125 2.125-7.277 2.125h-6.041v10.434h-6.023V17.492h12.458c2.872 0 5.162.748 6.87 2.244c1.707 1.496 2.562 3.813 2.562 6.949c-.001 3.424-.85 5.846-2.549 7.264"
-                        fill="#e2be81"
-                      ></path>
-                    </g>
-                  </svg>
-                  <div class="space-x-[1px]">
-                    <span>1,523</span>
-                    <span class="text-textdarker">개시</span>
-                  </div>
-                </li>
-              </ul>
-            </div>
-          </div>
-
-          <!-- NAME -->
-          <div class="flex flex-col text-textwhite text-[7px] text-start whitespace-nowrap">
-            <span class="">테스트 님</span>
-            <span class="text-[6px] text-[#7d7d7d]">닉네임 님</span>
-          </div>
-
-          <!-- mail -->
-          <div class="relative inline-block">
-            <svg
-              xmlns="http://www.w3.org/2000/svg"
-              viewBox="0 0 24 24"
-              fill="#AEAFAF"
-              class="size-[21px] active:bg-[#262627] p-1 rounded cursor-pointer"
-            >
-              <path
-                d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z"
-              />
-              <path
-                d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z"
-              />
-            </svg>
-            <!-- Red Dot Badge -->
-            <span
-              class="absolute top-[5px] left-[3px] block size-[5px] rounded-full bg-maintheme"
-            ></span>
+          <div id="dropdown"
+            class="hidden absolute top-full -right-8 mt-2 w-[120px] bg-[#2d2d2d] text-white rounded shadow-lg z-50">
+            <ul class="p-1 divide-y divide-textdarker">
+              <li class="px-2 py-[6px] cursor-pointer flex items-center text-[11px] gap-2">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true" role="img" class="size-4" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M32 2C15.432 2 2 15.432 2 32s13.432 30 30 30s30-13.432 30-30S48.568 2 32 2m-4.592 37.521c1.316 1.621 2.988 2.431 5.018 2.431c2.078 0 3.664-.695 4.756-2.086c.604-.748 1.104-1.87 1.502-3.366h6.023c-.52 3.163-1.848 5.735-3.982 7.717c-2.137 1.981-4.871 2.972-8.209 2.972c-4.129 0-7.375-1.338-9.736-4.016c-2.363-2.689-3.545-6.378-3.545-11.063c0-5.066 1.344-8.971 4.031-11.713c2.338-2.389 5.311-3.583 8.92-3.583c4.83 0 8.361 1.601 10.594 4.804c1.234 1.798 1.896 3.602 1.986 5.413h-6.063c-.387-1.392-.881-2.44-1.484-3.149c-1.08-1.26-2.682-1.891-4.803-1.891c-2.16 0-3.863.89-5.111 2.668c-1.246 1.778-1.869 4.295-1.869 7.549c0 3.254.658 5.691 1.972 7.313"
+                      fill=" #e2be81"></path>
+                  </g>
+                </svg>
+                <div>
+                  <span>12,310</span>
+                  <span class="text-textdarker">개시</span>
+                </div>
+              </li>
+              <li class="px-2 py-[6px] cursor-pointer flex items-center  gap-2">
+                <svg viewBox="0 0 64 64" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+                  aria-hidden="true" role="img" class="size-4" preserveAspectRatio="xMidYMid meet" fill="#000000">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path
+                      d="M33.543 22.531h-5.464v8.543h5.464c1.384 0 2.46-.348 3.228-1.043s1.151-1.797 1.151-3.307s-.384-2.586-1.151-3.229s-1.844-.964-3.228-.964"
+                      fill="#e2be81"></path>
+                    <path
+                      d="M31.999 2c-16.568 0-30 13.432-30 30s13.432 30 30 30C48.568 62 62 48.568 62 32S48.568 2 31.999 2m9.398 31.949c-1.699 1.418-4.125 2.125-7.277 2.125h-6.041v10.434h-6.023V17.492h12.458c2.872 0 5.162.748 6.87 2.244c1.707 1.496 2.562 3.813 2.562 6.949c-.001 3.424-.85 5.846-2.549 7.264"
+                      fill="#e2be81"></path>
+                  </g>
+                </svg>
+                <div class="space-x-[1px]">
+                  <span>1,523</span>
+                  <span class="text-textdarker">개시</span>
+                </div>
+              </li>
+            </ul>
           </div>
         </div>
-      </nav>
-    </header>
 
-    <main class="flex h-[calc(100vh-73px)] px-3 flex-col gap-2">
-      <!-- sidebar -->
-      <aside
-        id="sidebar"
-        class="w-2/4 h-full bg-[#0f0f0e] fixed top-0 left-0 transition-transform duration-300 -translate-x-full border-r border-[#1f1f20]"
-      >
-        <div class="flex flex-col justify-center pt-3 px-3">
-          <img
-            src="/images/logo-big.png"
-            alt="logo"
-            class="w-[100px] mx-auto"
-          />
-          <ul class="text-textwhite text-[12px] mt-5 divide-y divide-[#3c3c3c]">
-            <!-- HOLDEM -->
-            <li class="space-y-2 pb-3">
-              <h6>HOLDEM</h6>
-              <div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="size-4"
-                  >
-                    <path
-                      d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z"
-                    />
-                    <path
-                      d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z"
-                    />
-                  </svg>
-                  <a class="text-[12.5px]" href="">홈</a>
-                </div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="size-4"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-                  <a class="text-[12.5px]" href="">시작하기</a>
-                </div>
-              </div>
-            </li>
-            <!-- MENU -->
-            <li class="space-y-2 mt-5 pb-3">
-              <h6>MENU</h6>
-              <div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    fill="currentColor"
-                    viewBox="0 0 1024 1024"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="size-4 -scale-x-100"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <defs>
-                        <style></style>
-                      </defs>
-                      <path
-                        d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 0 1 520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 0 1 270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 0 1 0 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z"
-                      ></path>
-                    </g>
-                  </svg>
-                  <a class="text-[12.5px]" href="/deposit.html">입금신청</a>
-                </div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    fill="currentColor"
-                    viewBox="0 0 1024 1024"
-                    xmlns="http://www.w3.org/2000/svg"
-                    class="size-4"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <defs>
-                        <style></style>
-                      </defs>
-                      <path
-                        d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 0 1 520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 0 1 270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 0 1 0 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z"
-                      ></path>
-                    </g>
-                  </svg>
-                  <a class="text-[12.5px]" href="/withdraw.html">출금신청</a>
-                </div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    width="24"
-                    height="24"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    stroke="currentColor"
-                    stroke-width="2"
-                    stroke-linecap="round"
-                    stroke-linejoin="round"
-                    class="lucide lucide-history-icon lucide-history size-4"
-                  >
-                    <path
-                      d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8"
-                    />
-                    <path d="M3 3v5h5" />
-                    <path d="M12 7v5l4 2" />
-                  </svg>
-                  <a class="text-[12.5px]" href="">게임내역</a>
-                </div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    viewBox="0 0 24 24"
-                    fill="currentColor"
-                    class="size-4"
-                  >
-                    <path
-                      fill-rule="evenodd"
-                      d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
-                      clip-rule="evenodd"
-                    />
-                  </svg>
-
-                  <a class="text-[12.5px]" href="/myProfile.html">마이페이지</a>
-                </div>
-              </div>
-            </li>
-            <!-- INFORMATION -->
-            <li class="space-y-2 mt-5">
-              <h6>INFORMATION</h6>
-              <div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    class="size-4"
-                    focusable="false"
-                    fill="currentColor"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    tabindex="-1"
-                    title="LocalActivity"
-                  >
-                    <path
-                      d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2m-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69z"
-                    ></path>
-                  </svg>
-                  <a class="text-[12.5px]" href="">이벤트</a>
-                </div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    class="size-4"
-                    fill="currentColor"
-                    focusable="false"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    tabindex="-1"
-                    title="Campaign"
-                  >
-                    <path
-                      d="M18 11v2h4v-2zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61M20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4M4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34"
-                    ></path>
-                  </svg>
-                  <a class="text-[12.5px]" href="/notice.html">공지사항</a>
-                </div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    class="size-4"
-                    fill="currentColor"
-                    focusable="false"
-                    aria-hidden="true"
-                    viewBox="0 0 24 24"
-                    tabindex="-1"
-                    title="SupportAgent"
-                  >
-                    <path
-                      d="M21 12.22C21 6.73 16.74 3 12 3c-4.69 0-9 3.65-9 9.28-.6.34-1 .98-1 1.72v2c0 1.1.9 2 2 2h1v-6.1c0-3.87 3.13-7 7-7s7 3.13 7 7V19h-8v2h8c1.1 0 2-.9 2-2v-1.22c.59-.31 1-.92 1-1.64v-2.3c0-.7-.41-1.31-1-1.62"
-                    ></path>
-                    <circle cx="9" cy="13" r="1"></circle>
-                    <circle cx="15" cy="13" r="1"></circle>
-                    <path
-                      d="M18 11.03C17.52 8.18 15.04 6 12.05 6c-3.03 0-6.29 2.51-6.03 6.45 2.47-1.01 4.33-3.21 4.86-5.89 1.31 2.63 4 4.44 7.12 4.47"
-                    ></path>
-                  </svg>
-                  <a class="text-[12.5px]" href="/customer.html">고객센터</a>
-                </div>
-                <div
-                  class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2"
-                >
-                  <svg
-                    class="size-4"
-                    viewBox="0 0 24 24"
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="currentColor"
-                  >
-                    <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
-                    <g
-                      id="SVGRepo_tracerCarrier"
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                    ></g>
-                    <g id="SVGRepo_iconCarrier">
-                      <path
-                        fill="none"
-                        stroke="currentColor"
-                        stroke-width="2"
-                        d="M4.99787498,6.99999999 L4.99787498,0.999999992 L19.4999998,0.999999992 L22.9999998,4.50000005 L23,23 L17,23 M18,1 L18,6 L23,6 M10,23 C13.8659932,23 17,19.8659932 17,16 C17,12.1340068 13.8659932,9 10,9 C6.13400675,9 3,12.1340068 3,16 C3,19.8659932 6.13400675,23 10,23 Z M10,12 L10,16 L13,19"
-                      ></path>
-                    </g>
-                  </svg>
-
-                  <a class="text-[12.5px]" href="/gamerule.html">게임규칙</a>
-                </div>
-              </div>
-            </li>
-          </ul>
+        <!-- NAME -->
+        <div class="flex flex-col text-textwhite text-[7px] text-start whitespace-nowrap">
+          <span class="">테스트 님</span>
+          <span class="text-[6px] text-[#7d7d7d]">닉네임 님</span>
         </div>
-      </aside>
 
-      <!-- charges -->
-      <div
-        class="bg-[#232223] text-textwhite w-full rounded-lg overflow-hidden text-[13px] border border-[#383839] mt-14"
-      >
-        <h1 class="bg-[#3f3f3f] text-center py-2 text-[14px] font-bold">
-          포인트 충전신청
-        </h1>
+        <!-- mail -->
+        <div class="relative inline-block">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="#AEAFAF"
+            class="size-[21px] active:bg-[#262627] p-1 rounded cursor-pointer">
+            <path d="M1.5 8.67v8.58a3 3 0 0 0 3 3h15a3 3 0 0 0 3-3V8.67l-8.928 5.493a3 3 0 0 1-3.144 0L1.5 8.67Z" />
+            <path
+              d="M22.5 6.908V6.75a3 3 0 0 0-3-3h-15a3 3 0 0 0-3 3v.158l9.714 5.978a1.5 1.5 0 0 0 1.572 0L22.5 6.908Z" />
+          </svg>
+          <!-- Red Dot Badge -->
+          <span class="absolute top-[5px] left-[3px] block size-[5px] rounded-full bg-maintheme"></span>
+        </div>
+      </div>
+    </nav>
+  </header>
 
-        <div class="py-5 px-3 space-y-1">
-          <!-- first block inputs -->
-          <div class="flex justify-between gap-1">
-            <div
-              class="bg-[#2b2a2a] border border-[#383839] py-2 w-1/2 rounded px-2 text-[12px] text-center"
-            >
-              <label for="owned" class="text-maintheme">보유머니</label>
-              <input
-                id="owned"
-                type="number"
-                value="0"
-                class="text-end bg-[#232223] rounded-full py-2 w-full px-2 mt-1"
-                disabled
-              />
-            </div>
-            <div
-              class="bg-[#2b2a2a] border border-[#383839] py-2 w-1/2 rounded px-2 text-[12px] text-center"
-            >
-              <label for="balance" class="text-maintheme">보유포인트</label>
-              <input
-                id="balance"
-                type="text"
-                value="4,170"
-                class="text-end bg-[#232223] rounded-full py-2 w-full px-2 mt-1"
-                disabled
-              />
-            </div>
-          </div>
-
-          <!-- second block -->
-          <div
-            class="bg-[#2b2a2a] border border-[#383839] py-2 rounded px-2 text-[12px]"
-          >
-            <div class="space-y-4 pt-1 pb-1">
-              <h6 class="text-maintheme text-center">충전 신청</h6>
-
-              <div class="flex justify-between mt-3 gap-2">
-                <span class="text-center w-[100px]">현재 보유머니</span>
-                <span class="w-full text-end">4,740</span>
+  <main class="flex h-[calc(100vh-73px)] px-3 flex-col gap-2">
+    <!-- sidebar -->
+    <aside id="sidebar"
+      class="w-2/4 h-full bg-[#0f0f0e] fixed top-0 left-0 transition-transform duration-300 -translate-x-full border-r border-[#1f1f20]">
+      <div class="flex flex-col justify-center pt-3 px-3">
+        <img src="/images/logo-big.png" alt="logo" class="w-[100px] mx-auto" />
+        <ul class="text-textwhite text-[12px] mt-5 divide-y divide-[#3c3c3c]">
+          <!-- HOLDEM -->
+          <li class="space-y-2 pb-3">
+            <h6>HOLDEM</h6>
+            <div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                  <path
+                    d="M11.47 3.841a.75.75 0 0 1 1.06 0l8.69 8.69a.75.75 0 1 0 1.06-1.061l-8.689-8.69a2.25 2.25 0 0 0-3.182 0l-8.69 8.69a.75.75 0 1 0 1.061 1.06l8.69-8.689Z" />
+                  <path
+                    d="m12 5.432 8.159 8.159c.03.03.06.058.091.086v6.198c0 1.035-.84 1.875-1.875 1.875H15a.75.75 0 0 1-.75-.75v-4.5a.75.75 0 0 0-.75-.75h-3a.75.75 0 0 0-.75.75V21a.75.75 0 0 1-.75.75H5.625a1.875 1.875 0 0 1-1.875-1.875v-6.198a2.29 2.29 0 0 0 .091-.086L12 5.432Z" />
+                </svg>
+                <a class="text-[12.5px]" href="">홈</a>
               </div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                  <path fill-rule="evenodd"
+                    d="M2.25 12c0-5.385 4.365-9.75 9.75-9.75s9.75 4.365 9.75 9.75-4.365 9.75-9.75 9.75S2.25 17.385 2.25 12Zm14.024-.983a1.125 1.125 0 0 1 0 1.966l-5.603 3.113A1.125 1.125 0 0 1 9 15.113V8.887c0-.857.921-1.4 1.671-.983l5.603 3.113Z"
+                    clip-rule="evenodd" />
+                </svg>
+                <a class="text-[12.5px]" href="">시작하기</a>
+              </div>
+            </div>
+          </li>
+          <!-- MENU -->
+          <li class="space-y-2 mt-5 pb-3">
+            <h6>MENU</h6>
+            <div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg"
+                  class="size-4 -scale-x-100">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <defs>
+                      <style></style>
+                    </defs>
+                    <path
+                      d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 0 1 520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 0 1 270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 0 1 0 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z">
+                    </path>
+                  </g>
+                </svg>
+                <a class="text-[12.5px]" href="/deposit.html">입금신청</a>
+              </div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg fill="currentColor" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg" class="size-4">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <defs>
+                      <style></style>
+                    </defs>
+                    <path
+                      d="M521.7 82c-152.5-.4-286.7 78.5-363.4 197.7-3.4 5.3.4 12.3 6.7 12.3h70.3c4.8 0 9.3-2.1 12.3-5.8 7-8.5 14.5-16.7 22.4-24.5 32.6-32.5 70.5-58.1 112.7-75.9 43.6-18.4 90-27.8 137.9-27.8 47.9 0 94.3 9.3 137.9 27.8 42.2 17.8 80.1 43.4 112.7 75.9 32.6 32.5 58.1 70.4 76 112.5C865.7 417.8 875 464.1 875 512c0 47.9-9.4 94.2-27.8 137.8-17.8 42.1-43.4 80-76 112.5s-70.5 58.1-112.7 75.9A352.8 352.8 0 0 1 520.6 866c-47.9 0-94.3-9.4-137.9-27.8A353.84 353.84 0 0 1 270 762.3c-7.9-7.9-15.3-16.1-22.4-24.5-3-3.7-7.6-5.8-12.3-5.8H165c-6.3 0-10.2 7-6.7 12.3C234.9 863.2 368.5 942 520.6 942c236.2 0 428-190.1 430.4-425.6C953.4 277.1 761.3 82.6 521.7 82zM395.02 624v-76h-314c-4.4 0-8-3.6-8-8v-56c0-4.4 3.6-8 8-8h314v-76c0-6.7 7.8-10.5 13-6.3l141.9 112a8 8 0 0 1 0 12.6l-141.9 112c-5.2 4.1-13 .4-13-6.3z">
+                    </path>
+                  </g>
+                </svg>
+                <a class="text-[12.5px]" href="/withdraw.html">출금신청</a>
+              </div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"
+                  stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"
+                  class="lucide lucide-history-icon lucide-history size-4">
+                  <path d="M3 12a9 9 0 1 0 9-9 9.75 9.75 0 0 0-6.74 2.74L3 8" />
+                  <path d="M3 3v5h5" />
+                  <path d="M12 7v5l4 2" />
+                </svg>
+                <a class="text-[12.5px]" href="">게임내역</a>
+              </div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="size-4">
+                  <path fill-rule="evenodd"
+                    d="M7.5 6a4.5 4.5 0 1 1 9 0 4.5 4.5 0 0 1-9 0ZM3.751 20.105a8.25 8.25 0 0 1 16.498 0 .75.75 0 0 1-.437.695A18.683 18.683 0 0 1 12 22.5c-2.786 0-5.433-.608-7.812-1.7a.75.75 0 0 1-.437-.695Z"
+                    clip-rule="evenodd" />
+                </svg>
 
+                <a class="text-[12.5px]" href="/myProfile.html">마이페이지</a>
+              </div>
+            </div>
+          </li>
+          <!-- INFORMATION -->
+          <li class="space-y-2 mt-5">
+            <h6>INFORMATION</h6>
+            <div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg class="size-4" focusable="false" fill="currentColor" aria-hidden="true" viewBox="0 0 24 24"
+                  tabindex="-1" title="LocalActivity">
+                  <path
+                    d="M20 12c0-1.1.9-2 2-2V6c0-1.1-.9-2-2-2H4c-1.1 0-1.99.9-1.99 2v4c1.1 0 1.99.9 1.99 2s-.89 2-2 2v4c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2v-4c-1.1 0-2-.9-2-2m-4.42 4.8L12 14.5l-3.58 2.3 1.08-4.12-3.29-2.69 4.24-.25L12 5.8l1.54 3.95 4.24.25-3.29 2.69z">
+                  </path>
+                </svg>
+                <a class="text-[12.5px]" href="">이벤트</a>
+              </div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg class="size-4" fill="currentColor" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                  tabindex="-1" title="Campaign">
+                  <path
+                    d="M18 11v2h4v-2zm-2 6.61c.96.71 2.21 1.65 3.2 2.39.4-.53.8-1.07 1.2-1.6-.99-.74-2.24-1.68-3.2-2.4-.4.54-.8 1.08-1.2 1.61M20.4 5.6c-.4-.53-.8-1.07-1.2-1.6-.99.74-2.24 1.68-3.2 2.4.4.53.8 1.07 1.2 1.6.96-.72 2.21-1.65 3.2-2.4M4 9c-1.1 0-2 .9-2 2v2c0 1.1.9 2 2 2h1v4h2v-4h1l5 3V6L8 9zm11.5 3c0-1.33-.58-2.53-1.5-3.35v6.69c.92-.81 1.5-2.01 1.5-3.34">
+                  </path>
+                </svg>
+                <a class="text-[12.5px]" href="/notice.html">공지사항</a>
+              </div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg class="size-4" fill="currentColor" focusable="false" aria-hidden="true" viewBox="0 0 24 24"
+                  tabindex="-1" title="SupportAgent">
+                  <path
+                    d="M21 12.22C21 6.73 16.74 3 12 3c-4.69 0-9 3.65-9 9.28-.6.34-1 .98-1 1.72v2c0 1.1.9 2 2 2h1v-6.1c0-3.87 3.13-7 7-7s7 3.13 7 7V19h-8v2h8c1.1 0 2-.9 2-2v-1.22c.59-.31 1-.92 1-1.64v-2.3c0-.7-.41-1.31-1-1.62">
+                  </path>
+                  <circle cx="9" cy="13" r="1"></circle>
+                  <circle cx="15" cy="13" r="1"></circle>
+                  <path
+                    d="M18 11.03C17.52 8.18 15.04 6 12.05 6c-3.03 0-6.29 2.51-6.03 6.45 2.47-1.01 4.33-3.21 4.86-5.89 1.31 2.63 4 4.44 7.12 4.47">
+                  </path>
+                </svg>
+                <a class="text-[12.5px]" href="/customer.html">고객센터</a>
+              </div>
+              <div class="flex items-center hover:bg-[#262627] active:bg-[#262627] py-[7px] px-2 rounded gap-2">
+                <svg class="size-4" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg" fill="currentColor">
+                  <g id="SVGRepo_bgCarrier" stroke-width="0"></g>
+                  <g id="SVGRepo_tracerCarrier" stroke-linecap="round" stroke-linejoin="round"></g>
+                  <g id="SVGRepo_iconCarrier">
+                    <path fill="none" stroke="currentColor" stroke-width="2"
+                      d="M4.99787498,6.99999999 L4.99787498,0.999999992 L19.4999998,0.999999992 L22.9999998,4.50000005 L23,23 L17,23 M18,1 L18,6 L23,6 M10,23 C13.8659932,23 17,19.8659932 17,16 C17,12.1340068 13.8659932,9 10,9 C6.13400675,9 3,12.1340068 3,16 C3,19.8659932 6.13400675,23 10,23 Z M10,12 L10,16 L13,19">
+                    </path>
+                  </g>
+                </svg>
+
+                <a class="text-[12.5px]" href="/gamerule.html">게임규칙</a>
+              </div>
+            </div>
+          </li>
+        </ul>
+      </div>
+    </aside>
+
+    <!-- charges -->
+    <div
+      class="bg-[#232223] text-textwhite w-full rounded-lg overflow-hidden text-[13px] border border-[#383839] mt-14">
+      <h1 class="bg-[#3f3f3f] text-center py-2 text-[14px] font-bold">
+        포인트 충전신청
+      </h1>
+
+      <div class="py-5 px-3 space-y-1">
+        <!-- first block inputs -->
+        <div class="flex justify-between gap-1">
+          <div class="bg-[#2b2a2a] border border-[#383839] py-2 w-1/2 rounded px-2 text-[12px] text-center">
+            <label for="owned" class="text-maintheme">보유머니</label>
+            <input id="owned" type="number" value="0" class="text-end bg-[#232223] rounded-full py-2 w-full px-2 mt-1"
+              disabled />
+          </div>
+          <div class="bg-[#2b2a2a] border border-[#383839] py-2 w-1/2 rounded px-2 text-[12px] text-center">
+            <label for="balance" class="text-maintheme">보유포인트</label>
+            <input id="balance" type="text" value="4,170"
+              class="text-end bg-[#232223] rounded-full py-2 w-full px-2 mt-1" disabled />
+          </div>
+        </div>
+
+        <!-- second block -->
+        <div class="bg-[#2b2a2a] border border-[#383839] py-2 rounded px-2 text-[12px]">
+          <div class="space-y-4 pt-1 pb-1">
+            <h6 class="text-maintheme text-center">충전 신청</h6>
+
+            <div class="flex justify-between mt-3 gap-2">
+              <span class="text-center w-[100px]">현재 보유머니</span>
+              <span class="w-full text-end">4,740</span>
+            </div>
+
+            <div class="flex justify-between w-full items-center gap-2">
+              <p class="whitespace-nowrap w-[100px] text-center">
+                충전계좌 획인
+              </p>
+              <div class="flex w-full justify-between gap-2">
+                <button
+                  class="bg-[#454545] w-1/2 py-[7px] rounded-[2px] text-[10px] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,32%)]">
+                  계좌문의
+                </button>
+                <button
+                  class="bg-[#454545] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,32%)] w-1/2 py-[7px] whitespace-nowrap rounded-[2px] text-[10px] overflow-hidden">
+                  코인충전 바로가기
+                </button>
+              </div>
+            </div>
+
+            <div class="space-y-[7px]">
               <div class="flex justify-between w-full items-center gap-2">
-                <p class="whitespace-nowrap w-[100px] text-center">
-                  충전계좌 획인
-                </p>
-                <div class="flex w-full justify-between gap-2">
-                  <button
-                    class="bg-[#454545] w-1/2 py-[7px] rounded-[2px] text-[10px] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,32%)]"
-                  >
-                    계좌문의
-                  </button>
-                  <button
-                    class="bg-[#454545] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,32%)] w-1/2 py-[7px] whitespace-nowrap rounded-[2px] text-[10px] overflow-hidden"
-                  >
-                    코인충전 바로가기
-                  </button>
-                </div>
+                <label for="recharge" class="whitespace-nowrap w-[100px] text-center">충전 금액</label>
+                <input class="bg-[#232223] w-full text-[10px] py-[7px] rounded-[2px] px-1 border border-[#313131]"
+                  id="recharge" type="text" placeholder="직접입력은 이곳에 숫자만 입력해주세요" />
               </div>
-
-              <div class="space-y-[7px]">
-                <div class="flex justify-between w-full items-center gap-2">
-                  <label
-                    for="recharge"
-                    class="whitespace-nowrap w-[100px] text-center"
-                    >충전 금액</label
-                  >
-                  <input
-                    class="bg-[#232223] w-full text-[10px] py-[7px] rounded-[2px] px-1 border border-[#313131]"
-                    id="recharge"
-                    type="text"
-                    placeholder="직접입력은 이곳에 숫자만 입력해주세요"
-                  />
-                </div>
-                <div
-                  class="text-maintheme flex justify-between overflow-auto gap-1"
-                >
-                  <button
-                    class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full"
-                  >
-                    +1만원
-                  </button>
-                  <button
-                    class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full"
-                  >
-                    +5만원
-                  </button>
-                  <button
-                    class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full"
-                  >
-                    +10만원
-                  </button>
-                  <button
-                    class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full"
-                  >
-                    +50만원
-                  </button>
-                </div>
+              <div class="text-maintheme flex justify-between overflow-auto gap-1">
+                <button
+                  class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full">
+                  +1만원
+                </button>
+                <button
+                  class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full">
+                  +5만원
+                </button>
+                <button
+                  class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full">
+                  +10만원
+                </button>
+                <button
+                  class="bg-[#3f3f3f] hover:bg-[hsl(0,0%,32%)] active:bg-[hsl(0,0%,30%)] text-[10px] py-[5px] px-[18px] rounded-[2px] whitespace-nowrap w-full">
+                  +50만원
+                </button>
               </div>
             </div>
           </div>
-          <!-- button -->
-          <div class="w-full flex items-center justify-center mt-2">
-            <button
-              class="bg-maintheme text-black w-[180px] rounded-[2px] py-[4px] hover:bg-[#e2be81] active:bg-[hsl(38,63%,75%)] cursor-pointer"
-            >
-              충전 신청
-            </button>
-          </div>
+        </div>
+        <!-- button -->
+        <div class="w-full flex items-center justify-center mt-2">
+          <button
+            class="bg-maintheme text-black w-[180px] rounded-[2px] py-[4px] hover:bg-[#e2be81] active:bg-[hsl(38,63%,75%)] cursor-pointer">
+            충전 신청
+          </button>
         </div>
       </div>
+    </div>
 
-      <!-- second block -->
-      <div
-        class="bg-[#232223] text-textwhite w-full rounded-lg overflow-hidden text-[13px] border border-[#383839]"
-      >
-        <h1 class="bg-[#3f3f3f] text-center py-2 text-[14px] font-bold">
-          충전신청 내역
-        </h1>
+    <!-- second block -->
+    <div class="bg-[#232223] text-textwhite w-full rounded-lg overflow-hidden text-[13px] border border-[#383839]">
+      <h1 class="bg-[#3f3f3f] text-center py-2 text-[14px] font-bold">
+        충전신청 내역
+      </h1>
 
-        <!-- table -->
-        <div class="py-4 px-3">
-          <table class="text-[12px] min-w-full table-fixed border-collapse">
-            <thead class="bg-[#2b2a2a] border border-[#383839]">
-              <tr>
-                <th class="w-1/4 text-left px-2 py-1">날짜</th>
-                <th class="w-1/4 text-left px-2 py-1">금액</th>
-                <th class="w-1/4 text-left px-2 py-1">진행사항</th>
-                <th class="w-1/4 text-left px-2 py-1">삭제</th>
-              </tr>
-            </thead>
-            <tbody class="">
-              <tr class="text-[11px] text-textdarker">
-                <td class="px-2 py-1 whitespace-nowrap">2024-07-07 14:25</td>
-                <td class="px-2 py-1">10,000</td>
-                <td class="px-2 py-1">처리충</td>
-                <td class="px-2 py-1"></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
+      <!-- table -->
+      <div class="py-4 px-3">
+        <table class="text-[12px] min-w-full table-fixed border-collapse">
+          <thead class="bg-[#2b2a2a] border border-[#383839]">
+            <tr>
+              <th class="w-1/4 text-left px-2 py-1">날짜</th>
+              <th class="w-1/4 text-left px-2 py-1">금액</th>
+              <th class="w-1/4 text-left px-2 py-1">진행사항</th>
+              <th class="w-1/4 text-left px-2 py-1">삭제</th>
+            </tr>
+          </thead>
+          <tbody class="">
+            <tr class="text-[11px] text-textdarker">
+              <td class="px-2 py-1 whitespace-nowrap">2024-07-07 14:25</td>
+              <td class="px-2 py-1">10,000</td>
+              <td class="px-2 py-1">처리충</td>
+              <td class="px-2 py-1"></td>
+            </tr>
+          </tbody>
+        </table>
       </div>
-    </main>
+    </div>
+  </main>
 
-    <script src="/js/main.js"></script>
-  </body>
+  <script src="/js/main.js"></script>
+</body>
+
 </html>
