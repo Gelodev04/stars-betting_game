@@ -12,6 +12,7 @@
         --color-maintheme: #e2be81;
         --color-textwhite: #aeafaf;
         --color-textdarker: #7d7d7d;
+        --breakpoint-md: 24rem;
       }
     </style>
 </head>
@@ -126,7 +127,7 @@
         </nav>
     </header>
 
-    <main class="flex h-[calc(100vh-73px)] px-3 flex-col gap-2">
+    <main class="flex h-[calc(100vh-73px)]  flex-col gap-2">
         <!-- sidebar -->
         <aside id="sidebar"
             class="w-2/4 h-full bg-[#0f0f0e] fixed top-0 left-0 transition-transform duration-300 -translate-x-full border-r border-[#1f1f20] z-10">
@@ -283,20 +284,19 @@
         </aside>
 
         <div
-            class="bg-[#232223] text-textwhite w-full rounded-lg overflow-hidden text-[13px] border border-[#383839] mt-14 max-w-[350px] mx-auto">
+            class="bg-[#232223] text-textwhite w-full  overflow-hidden text-[13px] border border-[#383839] mt-14  mx-auto">
             <h1 id="header" class="bg-[#3f3f3f] text-center py-2 text-[14px] font-bold">
                 고객센터
             </h1>
 
             <!-- table -->
-            <div id="content1" class="py-7 px-3  relative ">
-                <table class="text-[6px]  table-fixed border-collapse whitespace-nowrap w-full ">
-                    <thead class="bg-[#2b2a2a] border border-[#383839] text-maintheme ">
+            <div id="content1" class="py-7  relative ">
+                <table class="text-[6px] md:text-[10px]  table-fixed border-collapse whitespace-nowrap w-full ">
+                    <thead class="bg-[#2b2a2a] border border-[#383839] border-r-0 border-l-0 text-maintheme ">
                         <tr class="">
-                            <th class=" text-left px-2 py-[7px] ">번호</th>
-                            <th></th>
-                            <th class="w-[20px]"></th>
-                            <th class="w-[10px]"></th>
+                            <th class="w-[37px] text-left px-2 py-[7px]  ">번호</th>
+        
+                            <th class="w-[66px]"></th>
                             <th class=" text-left py-[7px] ">제목</th>
                             <th></th>
                             <th class="  px-2 py-[7px]">답변</th>
@@ -305,7 +305,7 @@
                             <th class=" px-2 py-[7px]">관리</th>
                         </tr>
                     </thead>
-                    <tbody class="divide-y divide-[#353535] text-[6px]">
+                    <tbody class="divide-y divide-[#353535] text-[6px] md:text-[8px]">
                         <tr class=" text-textdarker">
                             <td class="px-2 py-[10px] flex items-center ml-1">
                                 <span class="">4</span>
@@ -314,20 +314,18 @@
                             <td>
                                 <div class="flex items-center gap-1">
                                     <span
-                                        class="bg-[#b3262f] text-white rounded-full text-[5px] py-[3px] px-[6px]">필독</span>
-                                    <span class="text-[6px]">고객 센터 테스트글 4</span>
+                                        class="bg-[#b3262f] text-white rounded-full text-[5px] md:text-[6px]  py-[3px] px-[6px]">필독</span>
+                                    <span class=" ">고객 센터 테스트글 4</span>
                                 </div>
                             </td>
                             <td class="px-2 py-2"></td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                             <td class="px-2 py-2 text-center text-[#b3262f]">답변전</td>
                             <td class="px-2 py-2 text-center text-[#b3262f]">학인전</td>
                             <td class="px-2 py-2 text-center">05-20 15:36</td>
                             <td class="px-2 py-2 text-center">
                                 <button
-                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] overflow-hidden text-textwhite">
+                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] md:text-[8px] overflow-hidden text-textwhite">
                                     삭제
                                 </button>
                             </td>
@@ -340,12 +338,10 @@
                             <td>
                                 <div class="flex items-center gap-1">
                                     <span
-                                        class="bg-[#b3262f] text-white rounded-full text-[5px] py-[3px] px-[6px]">필독</span>
-                                    <span class="text-[6px]">고객 센터 테스트글 3</span>
+                                        class="bg-[#b3262f] text-white rounded-full text-[5px] md:text-[6px] py-[3px] px-[6px]">필독</span>
+                                    <span class="">고객 센터 테스트글 3</span>
                                 </div>
                             </td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                             <td class="px-2 py-2 text-center text-[#505050]"></td>
                             <td class="px-2 py-2 text-center text-[#505050]">답변완료</td>
@@ -353,7 +349,7 @@
                             <td class="px-2 py-2 text-center">05-20 15:36</td>
                             <td class="px-2 py-2 text-center">
                                 <button
-                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] overflow-hidden text-textwhite">
+                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] md:text-[8px] overflow-hidden text-textwhite">
                                     삭제
                                 </button>
                             </td>
@@ -367,12 +363,10 @@
 
                                 <div class="flex items-center gap-1">
                                     <span
-                                        class="bg-[#b3262f] text-white rounded-full text-[5px] py-[3px] px-[6px]">필독</span>
-                                    <span class="text-[6px]">고객 센터 테스트글 2</span>
+                                        class="bg-[#b3262f] text-white rounded-full text-[5px] md:text-[6px] py-[3px] px-[6px]">필독</span>
+                                    <span class="">고객 센터 테스트글 2</span>
                                 </div>
                             </td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                             <td class="px-2 py-2 text-center text-[#505050]"></td>
                             <td class="px-2 py-2 text-center text-[#505050]">답변완료</td>
@@ -380,7 +374,7 @@
                             <td class="px-2 py-2 text-center">05-20 15:36</td>
                             <td class="px-2 py-2 text-center">
                                 <button
-                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] overflow-hidden text-textwhite">
+                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] md:text-[8px] overflow-hidden text-textwhite">
                                     삭제
                                 </button>
                             </td>
@@ -393,12 +387,10 @@
                             <td>
                                 <div class="flex items-center gap-1">
                                     <span
-                                        class="bg-[#b3262f] text-white rounded-full text-[5px] py-[3px] px-[6px]">필독</span>
-                                    <span class="text-[6px]">고객 센터 테스트글 1</span>
+                                        class="bg-[#b3262f] text-white rounded-full text-[5px] md:text-[6px] py-[3px] px-[6px]">필독</span>
+                                    <span class="">고객 센터 테스트글 1</span>
                                 </div>
                             </td>
-                            <td></td>
-                            <td></td>
                             <td></td>
                             <td class="px-2 py-2 text-center text-[#505050]"></td>
                             <td class="px-2 py-2 text-center text-[#505050]">답변완료</td>
@@ -406,7 +398,7 @@
                             <td class="px-2 py-2 text-center">05-20 15:36</td>
                             <td class="px-2 py-2 text-center">
                                 <button
-                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] overflow-hidden text-textwhite">
+                                    class="bg-[#454545] active:bg-[hsl(0,0%,32%)] px-[5px] py-[1px] whitespace-nowrap rounded-[2px] text-[7px] md:text-[8px] overflow-hidden text-textwhite">
                                     삭제
                                 </button>
                             </td>

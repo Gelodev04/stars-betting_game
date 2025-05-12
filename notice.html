@@ -12,6 +12,7 @@
         --color-maintheme: #e2be81;
         --color-textwhite: #aeafaf;
         --color-textdarker: #7d7d7d;
+        --breakpoint-md: 22rem;
       }
     </style>
 </head>
@@ -121,7 +122,7 @@
     </nav>
   </header>
 
-  <main class="flex h-[calc(100vh-73px)] px-3 flex-col gap-2">
+  <main class="flex h-[calc(100vh-73px)]  flex-col gap-2">
     <!-- sidebar -->
     <aside id="sidebar"
       class="w-2/4 h-full bg-[#0f0f0e] fixed top-0 left-0 transition-transform duration-300 -translate-x-full border-r border-[#1f1f20] z-[10]">
@@ -264,23 +265,23 @@
 
     <!-- table -->
     <div
-      class="bg-[#232223] text-textwhite w-full rounded-lg overflow-hidden text-[13px] border border-[#383839] mt-14 max-w-[350px] mx-auto">
-      <h1 class="bg-[#3f3f3f] text-center py-2 text-[14px] font-bold">
+      class="bg-[#232223] text-textwhite w-full  overflow-hidden text-[13px] border border-[#383839] mt-14  mx-auto">
+      <h1 class="bg-[#3f3f3f] text-center py-2 text-[14px] font-bold ">
         공지사항
       </h1>
       <!-- table -->
       <div class="py-7 px-3  relative ">
-        <table class="text-[9px]    table-fixed border-collapse w-full">
+        <table class="text-[9px] md:text-[13px]  table-fixed border-collapse w-full">
           <thead class="bg-[#2b2a2a] border border-[#383839] text-maintheme">
             <tr class="whitespace-nowrap ">
               <th class="w-[37px]  text-left px-2 py-[7px] ">번호</th>
-              <th class="w-[73px]"></th>
-              <th class=" text-left px-2 py-[7px] w-[100px]  ">제목</th>
+              <th class="w-[73px] md:w-[94px]"></th>
+              <th class="text-left px-2 py-[7px] w-[100px]  ">제목</th>
               <th class=" px-2 py-[7px]">닉네임</th>
               <th class="  px-2 py-[7px]">레벨</th>
             </tr>
           </thead>
-          <tbody class="divide-y divide-[#353535] whitespace-nowrap text-[8px]">
+          <tbody class="divide-y divide-[#353535] whitespace-nowrap text-[8px] md:text-[11px]">
             <tr class=" text-textdarker">
               <td class="px-2 py-[10px] flex items-center ml-1">
                 <span class="mr-1">4</span>
@@ -288,7 +289,7 @@
               <td>
                 <div class="flex items-center gap-1">
                   <span
-                    class="bg-maintheme whitespace-nowrap text-black rounded-full text-[6px] py-[2px] px-[5px]">공지</span>
+                    class="bg-maintheme whitespace-nowrap text-black rounded-full text-[6px] md:text-[7px] py-[2px] px-[5px]">공지</span>
                   <span class="whitespace-nowrap">공지사항 안내드립니다.</span>
                 </div>
               </td>
@@ -302,7 +303,7 @@
               </td>
               <td>
                 <div class="flex items-center gap-1">
-                  <span class="bg-maintheme text-black rounded-full text-[6px] py-[2px] px-[5px]">공지</span>
+                  <span class="bg-maintheme text-black rounded-full text-[6px] md:text-[7px] py-[2px] px-[5px]">공지</span>
                   <span>긴급 공지 사항 안내</span>
                 </div>
               </td>
@@ -316,7 +317,7 @@
               </td>
               <td>
                 <div class="flex items-center gap-1">
-                  <span class="bg-maintheme text-black rounded-full text-[6px] py-[2px] px-[5px]">공지</span>
+                  <span class="bg-maintheme text-black rounded-full text-[6px] md:text-[7px] py-[2px] px-[5px]">공지</span>
                   <span>시스템 점건 공지 안내</span>
                 </div>
               </td>
@@ -330,7 +331,7 @@
               </td>
               <td>
                 <div class="flex items-center gap-1">
-                  <span class="bg-maintheme text-black rounded-full text-[6px] py-[2px] px-[5px]">공지</span>
+                  <span class="bg-maintheme text-black rounded-full text-[6px] md:text-[7px] py-[2px] px-[5px]">공지</span>
                   <span>공지사항 안내드립니다.</span>
                 </div>
               </td>
